@@ -34,3 +34,6 @@ else:
                 'flipper_length_mm': flipper_length_mm,
                 'body_mass_g': body_mass_g,
                 'sex': sex}
+        features = pd.DataFrame(data, index=[0])
+        return features
+    input_df = user_input_features()
