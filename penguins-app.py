@@ -61,3 +61,6 @@ if uploaded_file is not None:
 else:
     st.write('Awaiting CSV file to be uploaded. Currently using example input parameters (shown below).')
     st.write(df)
+
+# Reads in saved classification model
+load_clf = pickle.load(open('penguins_clf.pkl', 'rb'))
