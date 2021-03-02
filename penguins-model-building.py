@@ -26,3 +26,7 @@ Y = df['species']
 from sklearn.ensemble import RandomForestClassifier
 clf = RandomForestClassifier()
 clf.fit(X, Y)
+
+# Saving the model
+import pickle
+pickle.dump(clf, open('penguins_clf.pkl', 'wb'))
