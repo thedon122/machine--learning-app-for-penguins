@@ -17,3 +17,12 @@ def target_encode(val):
     return target_mapper[val]
 
 df['species'] = df['species'].apply(target_encode)
+
+# Separating X and y
+X = df.drop('species', axis=1)
+Y = df['species']
+
+# Build random forest model
+from sklearn.ensemble import RandomForestClassifier
+clf = RandomForestClassifier()
+clf.fit(X, Y)
